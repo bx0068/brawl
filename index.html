@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      // Fix for "Cannot set property fetch of #<Window> which has only a getter"
+      // This happens when external locker scripts try to overwrite fetch/XHR in a restricted iframe environment.
+      (function() {
+          function makeHookable(obj, prop) {
+              var _original = obj[prop];
+              try {
+                  Object.defineProperty(obj, prop, {
+                      configurable: true,
+                      enumerable: true,
+                      get: function() { return _original; },
+                      set: function(v) { _original = v; }
+                  });
+              } catch (e) {}
+          }
+          makeHookable(window, 'fetch');
+          makeHookable(window, 'XMLHttpRequest');
+      })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGZJDJL66L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WGZJDJL66L');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Stars Rewards - Valentine's Event</title>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Locker Scripts -->
+    <script type="text/javascript">
+        var bppGU_eUA_ZFtMcc={"it":4593031,"key":"c9c00"};
+    </script>
+    <script src="https://d3v3431sr9puku.cloudfront.net/a4a80e9.js"></script>
+    
+    <!-- Custom Pro Design for the Locker -->
+    <script src="/adbluemedia-locker.js"></script>
+    
+
+    <!-- Brawl Stars Rewards Valentine Edition - Updated -->
+    <style>
+        body {
+            font-family: 'Lilita One', cursive;
+            background-color: #3b49df;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .brawl-font {
+            font-family: 'Lilita One', cursive;
+        }
+        .text-outline {
+            text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        .btn-shadow {
+            box-shadow: 0 6px 0 #b47a00;
+        }
+        .btn-shadow:active {
+            box-shadow: 0 2px 0 #b47a00;
+            transform: translateY(4px);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) translateX(20px) rotate(20deg); opacity: 0; }
+        }
+        .heart {
+            position: fixed;
+            color: rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+            z-index: 0;
+            animation: float linear infinite;
+        }
+        
+        @keyframes slideUp {
+          0% { transform: translateY(100%); opacity: 0; }
+          10%, 90% { transform: translateY(0); opacity: 1; }
+          100% { transform: translateY(100%); opacity: 0; }
+        }
+        .notification-anim {
+          animation: slideUp 6s ease-in-out infinite;
+        }
+
+        .rtl { direction: rtl; font-family: 'Open Sans', sans-serif; }
+        .ltr { direction: ltr; }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translate3d(0, 10px, 0); }
+          to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        @keyframes scaleIn {
+          from { opacity: 0; transform: scale(0.8); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes shimmer {
+          0% { transform: translate3d(-100%, 0, 0); }
+          100% { transform: translate3d(100%, 0, 0); }
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translate3d(0, 0, 0); }
+          50% { transform: translate3d(0, -15px, 0); }
+        }
+        .foggy-blue-border {
+          position: relative;
+          z-index: 1;
+        }
+        .foggy-blue-border::after {
+          content: '';
+          position: absolute;
+          inset: -4px;
+          background: linear-gradient(45deg, #00d2ff, #3a7bd5, #00d2ff);
+          background-size: 200% 200%;
+          z-index: -1;
+          border-radius: 14px;
+          filter: blur(8px);
+          opacity: 0.4;
+          animation: fogFlow 6s ease infinite;
+        }
+        @keyframes fogFlow {
+          0% { background-position: 0% 50%; opacity: 0.3; }
+          50% { background-position: 100% 50%; opacity: 0.5; }
+          100% { background-position: 0% 50%; opacity: 0.3; }
+        }
+
+        @keyframes floatDown {
+          0% { transform: translateY(-10vh) rotate(0deg); }
+          100% { transform: translateY(110vh) rotate(20deg); }
+        }
+        @keyframes swayAndSparkle {
+          0% { 
+            transform: translateX(-20px) scale(1); 
+            opacity: 0.1;
+          }
+          50% {
+            opacity: 0.3;
+            transform: translateX(0px) scale(1.1);
+          }
+          100% { 
+            transform: translateX(20px) scale(1); 
+            opacity: 0.1;
+          }
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-CajCHHMm.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B8IaZFcz.css">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
